@@ -27,13 +27,15 @@
 	bank.kontoHinzufügen(new Konto(new Kunde("Glubsch","Lo"),2000,2,2));
 	bank.kontoHinzufügen(new Konto(new Kunde("Ha","Tschi"),3000,3,3));
 	
-	anmelden(2,3);
+	//anmelden(2,3);
 	anmelden(2,2);
+	Fenster view = new Fenster();
+	view.guiStarten();
 
-	bank.überweisen(nutzerIban, 3, 5000);//Zu wenig Geld
-	bank.überweisen(nutzerIban, 3, 5);//Passt
-	bank.überweisen(nutzerIban, 100, 100);//falsche Iban
-	bank.abheben(nutzerIban, 100);
+	//bank.überweisen(nutzerIban, 3, 5000);//Zu wenig Geld
+	//bank.überweisen(nutzerIban, 3, 5);//Passt
+	//bank.überweisen(nutzerIban, 100, 100);//falsche Iban
+	//bank.abheben(nutzerIban, 100);
 
 
 	}
