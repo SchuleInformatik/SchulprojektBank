@@ -5,6 +5,7 @@ public class Bank {
 	
 	public void kontoHinzufügen(Konto k){
 		al.add(k);
+		
 	}
 	public Konto kontoSuche(int Iban){
 		for(int i=0;i<al.size();i++){	//schaut bei jedem Konto in der al ob es as passende ist, wenn ja, dann gibt es das konto zurück
@@ -12,6 +13,7 @@ public class Bank {
 				return al.get(i);
 			}
 		}
+		
 		return null;
 	}
 	public boolean anmeldenGültig(int Iban,int pin){
@@ -24,7 +26,7 @@ public class Bank {
 	}
 	public void überweisen(int IbanVon,int IbanZu,float betrag){
 		if(kontoSuche(IbanVon)!=null && kontoSuche(IbanZu) != null && betrag>0 ){// schaut ob konten vorhanden sind und das betrag>0
-			if(kontoSuche(IbanVon).getKontostand()>=betrag){//schatu ob genügend deld auf Konto ist
+			if(kontoSuche(IbanVon).getKontostand()>=betrag){//schaut ob genügend deld auf Konto ist
 				kontoSuche(IbanVon).überweisen(-betrag);
 				kontoSuche(IbanZu).überweisen(betrag);
 				System.out.println("Es wurde erfolgreich überwiesen.Ihr Kontostand ist nun "+kontoSuche(IbanVon).getKontostand()+"€");
@@ -40,7 +42,7 @@ public class Bank {
 	}
 	public void abheben(int Iban,float betrag){
 		if(kontoSuche(Iban)!=null && betrag>0 ){// schaut ob konto vorhanden ist und das betrag>0
-			if(kontoSuche(Iban).getKontostand()>=betrag){//schatu ob genügend deld auf Konto ist
+			if(kontoSuche(Iban).getKontostand()>=betrag){//schaut ob genügend deld auf Konto ist
 				kontoSuche(Iban).überweisen(-betrag);
 				System.out.println("Es wurde erfolgreich abgehoben. Ihr Kontostand ist nun "+kontoSuche(Iban).getKontostand()+"€");
 			}else{
