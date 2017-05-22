@@ -6,4 +6,10 @@ public class Kunde {
 		nachname=nName;
 		vorname=vName;
 	}
+	public String getNachname(){
+		return nachname;
+	}
+	public String getVorname(){
+		return vorname;
+	}
 }

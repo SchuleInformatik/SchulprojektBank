@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Bank {
 	private ArrayList <Konto> al =new ArrayList<Konto>(); //al steht für arraylist, ist eine Liste welche alle Konten enthält
+	private int dispo = 500;
 	
 	public void kontoHinzufügen(Konto k){
 		al.add(k);
@@ -24,32 +25,37 @@ public class Bank {
 		}
 		return false;
 	}
-	public void überweisen(int IbanVon,int IbanZu,float betrag){
+	public int überweisen(int IbanVon,int IbanZu,float betrag){
 		if(kontoSuche(IbanVon)!=null && kontoSuche(IbanZu) != null && betrag>0 ){// schaut ob konten vorhanden sind und das betrag>0
-			if(kontoSuche(IbanVon).getKontostand()>=betrag){//schaut ob genügend deld auf Konto ist
+			if(kontoSuche(IbanVon).getKontostand()+dispo >=betrag){//schaut ob genügend deld auf Konto ist
 				kontoSuche(IbanVon).überweisen(-betrag);
 				kontoSuche(IbanZu).überweisen(betrag);
 				System.out.println("Es wurde erfolgreich überwiesen.Ihr Kontostand ist nun "+kontoSuche(IbanVon).getKontostand()+"€");
 				System.out.println("Der Kontostand des Empfängers ist nun "+kontoSuche(IbanZu).getKontostand()+"€");
-
+				return 0;
 			}else{
 			System.out.println("Das Konto hat zu wenig Geld.");
+			return 1;
 			}
 		}else{
-			System.out.println("Die eingegebenen Iban stimmen nicht.");
+			System.out.println("Die eingegebenen Iban stimmen nicht.Oder Betrag ist zu klein.");
+			return 2;
 		}
 		
 	}
-	public void abheben(int Iban,float betrag){
+	public int abheben(int Iban,float betrag){
 		if(kontoSuche(Iban)!=null && betrag>0 ){// schaut ob konto vorhanden ist und das betrag>0
-			if(kontoSuche(Iban).getKontostand()>=betrag){//schaut ob genügend deld auf Konto ist
+			if(kontoSuche(Iban).getKontostand() + dispo >=betrag){//schaut ob genügend deld auf Konto ist
 				kontoSuche(Iban).überweisen(-betrag);
 				System.out.println("Es wurde erfolgreich abgehoben. Ihr Kontostand ist nun "+kontoSuche(Iban).getKontostand()+"€");
+				return 0;
 			}else{
 				System.out.println("Das Konto hat zu wenig Geld.");
+				return 1;
 			}	
 		}else{
 			System.out.println("Die eingegebenen Iban stimmt nicht.");
+			return 2;
 		}
 	}
 }

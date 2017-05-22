@@ -14,6 +14,9 @@ public class Konto {
 	public int getIban(){
 		return IBAN;
 	}
+	public Kunde getKunde(){
+		return Besitzer;
+	}
 	public float getKontostand(){
 		return Kontostand;
 	}
