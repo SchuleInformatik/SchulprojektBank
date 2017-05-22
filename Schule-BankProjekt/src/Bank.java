@@ -35,11 +35,11 @@ public class Bank {
 				return 0;
 			}else{
 			System.out.println("Das Konto hat zu wenig Geld.");
-			return 1;
+			return 4;
 			}
 		}else{
 			System.out.println("Die eingegebenen Iban stimmen nicht.Oder Betrag ist zu klein.");
-			return 2;
+			return 7;
 		}
 		
 	}
@@ -51,7 +51,7 @@ public class Bank {
 				return 0;
 			}else{
 				System.out.println("Das Konto hat zu wenig Geld.");
-				return 1;
+				return 4;
 			}	
 		}else{
 			System.out.println("Die eingegebenen Iban stimmt nicht.");

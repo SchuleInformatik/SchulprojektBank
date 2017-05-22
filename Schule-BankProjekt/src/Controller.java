@@ -10,7 +10,7 @@
 			return 0;
 		}else{
 			System.out.println("Ungültige Iban oder Passwort.");
-			return 1;
+			return 3;
 		}
 	}
 	static public int überweisen(int ibanZu, int betrag){
