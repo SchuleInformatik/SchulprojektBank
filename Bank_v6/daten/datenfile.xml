@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bank>
+    <al>
+        <Besitzer>
+            <nachname>Hans</nachname>
+            <vorname>Sale</vorname>
+        </Besitzer>
+        <Kontostand>8699.0</Kontostand>
+        <IBAN>1</IBAN>
+        <PIN>1</PIN>
+    </al>
+    <al>
+        <Besitzer>
+            <nachname>Glubsch</nachname>
+            <vorname>Lo</vorname>
+        </Besitzer>
+        <Kontostand>10000.99</Kontostand>
+        <IBAN>2</IBAN>
+        <PIN>2</PIN>
+    </al>
+    <al>
+        <Besitzer>
+            <nachname>Ha</nachname>
+            <vorname>Tschi</vorname>
+        </Besitzer>
+        <Kontostand>4000.0</Kontostand>
+        <IBAN>3</IBAN>
+        <PIN>3</PIN>
+    </al>
+</bank>
