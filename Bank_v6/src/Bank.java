@@ -12,7 +12,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Bank {
 	@XmlElement
 	private ArrayList <Konto> al = new ArrayList<Konto>(); //al steht fuer arraylist, ist eine Liste welche alle Konten enthaelt	
-	private int dispo = 500;
 	
 	public Bank(){
 		
@@ -41,7 +40,7 @@ public class Bank {
 	}
 	public int ueberweisen(int IbanVon, int IbanZu, double betrag){
 		if(kontoSuche(IbanVon)!=null && kontoSuche(IbanZu) != null && betrag>0 ){// schaut ob konten vorhanden sind und das betrag>0
-			if(kontoSuche(IbanVon).getKontostand()+dispo >=betrag){//schaut ob genuegend Geld auf Konto ist
+			if(kontoSuche(IbanVon).getKontostand() + kontoSuche(IbanVon).getDispo() >= betrag){//schaut ob genuegend Geld auf Konto ist
 				kontoSuche(IbanVon).ueberweisen(-betrag);
 				kontoSuche(IbanZu).ueberweisen(betrag);
 				System.out.println("Es wurde erfolgreich ueberwiesen.Ihr Kontostand ist nun "+kontoSuche(IbanVon).getKontostand()+"€");
@@ -60,7 +59,7 @@ public class Bank {
 	}
 	public int abheben(int Iban, double betrag){
 		if(kontoSuche(Iban)!=null && betrag>0 ){// schaut ob konto vorhanden ist und das betrag>0
-			if(kontoSuche(Iban).getKontostand() + dispo >=betrag){//schaut ob genuegend deld auf Konto ist
+			if(kontoSuche(Iban).getKontostand() + kontoSuche(Iban).getDispo() >= betrag){//schaut ob genuegend deld auf Konto ist
 				kontoSuche(Iban).ueberweisen(-betrag);
 				System.out.println("Es wurde erfolgreich abgehoben. Ihr Kontostand ist nun "+kontoSuche(Iban).getKontostand()+"€");
 				return 0;

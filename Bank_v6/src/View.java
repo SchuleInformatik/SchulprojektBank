@@ -102,9 +102,11 @@ public class View {
     }
     
     public void benutzerPanel() {
-        hauptFenster.getBNameText().setText("controller...");
-        hauptFenster.getBVornameText().setText("controller...");
-        hauptFenster.getBKontonummerText().setText("controller...");
+        hauptFenster.getBNameText().setText("Name: " + controller.getKonto().getKunde().getNachname());
+        hauptFenster.getBVornameText().setText("Vorname: " + controller.getKonto().getKunde().getVorname());
+        hauptFenster.getBKontonummerText().setText("Kontonummer: " + controller.getKonto().getIban());
+        hauptFenster.getBDispoText().setText("Dispositionskredit: " + controller.getKonto().getDispo());
+
     }
     //Hauptfenster End
     

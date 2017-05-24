@@ -33,6 +33,7 @@ public class Hauptfenster extends javax.swing.JFrame {
         bNameText = new javax.swing.JLabel();
         bVornameText = new javax.swing.JLabel();
         bKontonummerText = new javax.swing.JLabel();
+        bDispoText = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         kontostandButton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
@@ -66,6 +67,9 @@ public class Hauptfenster extends javax.swing.JFrame {
         bKontonummerText.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         bKontonummerText.setText("Kontonummer:");
 
+        bDispoText.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        bDispoText.setText("Dispositionskredit:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -73,11 +77,11 @@ public class Hauptfenster extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bDispoText)
                     .addComponent(bKontonummerText)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(bNameText)
-                        .addComponent(bVornameText)))
-                .addContainerGap(597, Short.MAX_VALUE))
+                    .addComponent(bNameText)
+                    .addComponent(bVornameText))
+                .addContainerGap(564, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,7 +92,9 @@ public class Hauptfenster extends javax.swing.JFrame {
                 .addComponent(bVornameText)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bKontonummerText)
-                .addContainerGap(334, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bDispoText)
+                .addContainerGap(303, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Benutzer", jPanel1);
@@ -358,12 +364,17 @@ public class Hauptfenster extends javax.swing.JFrame {
     public javax.swing.JLabel getBKontonummerText() {
         return bKontonummerText;
     }
+    
+    public javax.swing.JLabel getBDispoText() {
+        return bDispoText;
+    }
     //Get Methoden End
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton abmeldenButton;
     private javax.swing.JButton auszahlenButton;
     private javax.swing.JTextField auszahlungText;
+    private javax.swing.JLabel bDispoText;
     private javax.swing.JLabel bKontonummerText;
     private javax.swing.JLabel bNameText;
     private javax.swing.JLabel bVornameText;

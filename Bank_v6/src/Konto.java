@@ -10,16 +10,19 @@ public class Konto {
 	private int IBAN;
 	@XmlElement
 	private int PIN;
+	@XmlElement
+	private double dispo;
 	
 	public Konto(){
 		
 	}
 	
-	public Konto (Kunde k, double ks, int iban, int pin){
+	public Konto (Kunde k, double ks, int iban, int pin, double d){
 		Besitzer = k;
 		Kontostand = ks;
 		IBAN = iban;
-		PIN = pin;		
+		PIN = pin;
+		dispo = d;
 	}
 	public int getIban(){
 		return IBAN;
@@ -33,6 +36,10 @@ public class Konto {
 	public int getPin(){
 		return PIN;
 	}
+	public double getDispo() {
+		return dispo;
+	}
+	
 	public void ueberweisen(double betrag){
 		Kontostand = Controller.round(Kontostand+betrag);
 	}

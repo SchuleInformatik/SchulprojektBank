@@ -45,16 +45,16 @@ import javax.xml.bind.Unmarshaller;
 		Controller controller = new Controller();
 		controller.bank = new Bank();
 		
-		/*controller.bank.kontoHinzufuegen(new Konto(new Kunde("Hans","Sale"),1000,1,1));
-		controller.bank.kontoHinzufuegen(new Konto(new Kunde("Glubsch","Lo"),2000,2,2));
-		controller.bank.kontoHinzufuegen(new Konto(new Kunde("Ha","Tschi"),3000,3,3));		
+		/*controller.bank.kontoHinzufuegen(new Konto(new Kunde("Hans","Sale"),1000,1,1,1000));
+		controller.bank.kontoHinzufuegen(new Konto(new Kunde("Glubsch","Lo"),2000,2,2,700));
+		controller.bank.kontoHinzufuegen(new Konto(new Kunde("Ha","Tschi"),3000,3,3,500));		
 		controller.datenSchreiben();*/
 		
 		controller.bank = controller.datenLesen();
 		//LoginFenster logInFenster = new LoginFenster(controller);
 		//logInFenster.guiStarten();
-                View view = new View(controller);
-                view.loginFensterStarten();
+        View view = new View(controller);
+        view.loginFensterStarten();
 				
 		//bank.ueberweisen(nutzerIban, 3, 5000);//Zu wenig Geld
 		//bank.ueberweisen(nutzerIban, 3, 5);//Passt

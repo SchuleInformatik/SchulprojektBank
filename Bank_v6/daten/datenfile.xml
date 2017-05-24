@@ -5,9 +5,10 @@
             <nachname>Hans</nachname>
             <vorname>Sale</vorname>
         </Besitzer>
-        <Kontostand>5699.0</Kontostand>
+        <Kontostand>-10.0</Kontostand>
         <IBAN>1</IBAN>
         <PIN>1</PIN>
+        <dispo>1000.0</dispo>
     </al>
     <al>
         <Besitzer>
@@ -17,6 +18,7 @@
         <Kontostand>10000.99</Kontostand>
         <IBAN>2</IBAN>
         <PIN>2</PIN>
+        <dispo>500.0</dispo>
     </al>
     <al>
         <Besitzer>
@@ -26,5 +28,6 @@
         <Kontostand>4000.0</Kontostand>
         <IBAN>3</IBAN>
         <PIN>3</PIN>
+        <dispo>700.0</dispo>
     </al>
 </bank>
