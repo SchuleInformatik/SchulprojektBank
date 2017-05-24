@@ -21,6 +21,9 @@ import javax.xml.bind.Unmarshaller;
 			return 3;
 		}
 	}
+	public Konto getKonto(){
+		return bank.kontoSuche(nutzerIban);
+	}
 	public int ueberweisen(int ibanZu, double betrag){
 		int status = bank.ueberweisen(nutzerIban, ibanZu, betrag);
 		if(status == 0) {
