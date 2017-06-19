@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bank>
+    <al>
+        <Besitzer>
+            <nachname>Arndt</nachname>
+            <vorname>Samuel</vorname>
+        </Besitzer>
+        <Kontostand>14790.0</Kontostand>
+        <IBAN>1</IBAN>
+        <passwort>arsa1</passwort>
+        <dispo>500.0</dispo>
+    </al>
+    <al>
+        <Besitzer>
+            <nachname>Will</nachname>
+            <vorname>Moritz</vorname>
+        </Besitzer>
+        <Kontostand>9650.0</Kontostand>
+        <IBAN>2</IBAN>
+        <passwort>wimo2</passwort>
+        <dispo>600.0</dispo>
+    </al>
+    <al>
+        <Besitzer>
+            <nachname>Zintel</nachname>
+            <vorname>Patrick</vorname>
+        </Besitzer>
+        <Kontostand>4850.0</Kontostand>
+        <IBAN>3</IBAN>
+        <passwort>zipa3</passwort>
+        <dispo>400.0</dispo>
+    </al>
+</bank>
