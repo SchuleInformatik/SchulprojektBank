@@ -39,7 +39,10 @@ public class Konto {
 	public double getDispo() {
 		return dispo;
 	}
-	
+	/**
+	 * addiert den eingegeben Betrag zum Kontostand
+	 * @param betrag
+	 */
 	public void ueberweisen(double betrag){
 		Kontostand = Controller.round(Kontostand+betrag);
 	}

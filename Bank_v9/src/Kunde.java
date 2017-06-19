@@ -14,9 +14,17 @@ public class Kunde {
 		nachname=nName;
 		vorname=vName;
 	}
+	/**
+	 * gibt Nachnamen zurück
+	 * @return
+	 */
 	public String getNachname(){
 		return nachname;
 	}
+	/**
+	 * gibt Vornamen zurück
+	 * @return
+	 */
 	public String getVorname(){
 		return vorname;
 	}
